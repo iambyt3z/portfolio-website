@@ -11,8 +11,10 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@mantine/core": "^7.3.2",
-        "@mantine/hooks": "^7.3.2",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@fontsource/monda": "^5.0.8",
+        "@mui/material": "^5.15.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-spring": "^9.7.3"
@@ -33,9 +35,6 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.5",
         "eslint-plugin-storybook": "^0.6.15",
-        "postcss": "^8.4.32",
-        "postcss-preset-mantine": "^1.12.1",
-        "postcss-simple-vars": "^7.0.1",
         "typescript": "^5.2.2",
         "vite": "^5.0.8"
     }

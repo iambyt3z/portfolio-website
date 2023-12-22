@@ -1,75 +1,32 @@
-import { animated, useSpring  } from "react-spring";
-import { Container } from "@mantine/core";
-import reactLogo from "./assets/react.svg";
-import { useState } from "react";
-import viteLogo from "/vite.svg";
+import { animated, useSpring } from "react-spring";
+
+import { Box } from "@mui/material";
+import InitialLoader from "./components/InitialLoader";
 
 function App() {
-    const [count, setCount] = useState(0);
-
     const startAnim = useSpring({
-        "from": { "opacity": 0 }, "opacity": 1
-    });
-
-    const loaderAnim = useSpring({
-        "delay": 1500,
-        "from": {
-            "transform": "translate3d(0, 0, 0)"
-        },
-        "to": {
-            "transform": "translate3d(100%, 0, 0)"
-        }
+        "from": { "opacity": 0 }, 
+        "height": "100vh",
+        "opacity": 1,
+        "overflow": "hidden",
     });
 
     return (
         <animated.div style={startAnim}>
-            <animated.div>
-                <Container 
-                    style={{
-                        "alignItems": "center",
-                        "backgroundColor": "gray",
-                        "display": "flex",
-                        "height": "100vh",
-                        "justifyContent": "center",
-                        "left": 0,
-                        "margin": 0,
-                        "padding": 0,
-                        "top": 0,
-                        "width": "100vw",
-                        "zIndex": 100
-                    }}
-                >
-                    Hello world!
-                </Container>
-            </animated.div>
+            <Box position="relative" zIndex={15}>
+                <InitialLoader/>
+            </Box>
 
-            {/* <Container style={{}}>
-                <div>
-                    <a href="https://vitejs.dev" target="_blank">
-                        <img src={viteLogo} className="logo" alt="Vite logo" />
-                    </a>
-                    
-                    <a href="https://react.dev" target="_blank">
-                        <img src={reactLogo} className="logo react" alt="React logo" />
-                    </a>
-                </div>
-                
-                <h1>Vite + React</h1>
-                
-                <div className="card">
-                    <button onClick={() => setCount((count) => count + 1)}>
-                        count is {count}
-                    </button>
-                    
-                    <p>
-                        Edit <code>src/App.tsx</code> and save to test HMR
-                    </p>
-                </div>
-                
-                <p className="read-the-docs">
-                    Click on the Vite and React logos to learn more
-                </p>
-            </Container> */}
+            <Box
+                left={0}
+                top={0}
+                position="absolute"
+                height="100vh"
+                width="100vw"
+                sx={{ "zIndex": 0 }}
+            >
+                Hello World!
+            </Box>
         </animated.div>
     );
 }
