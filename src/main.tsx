@@ -1,5 +1,5 @@
 import "./index.css";
-import "@fontsource/monda";
+import "@fontsource-variable/jura"; // Supports weights 300-700
 
 import App from "./App.tsx";
 import React from "react";
