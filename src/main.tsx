@@ -1,5 +1,6 @@
 import "./index.css";
 import "@fontsource-variable/jura"; // Supports weights 300-700
+import "@fontsource-variable/montserrat"; // Supports weights 100-900
 
 import App from "./App.tsx";
 import React from "react";

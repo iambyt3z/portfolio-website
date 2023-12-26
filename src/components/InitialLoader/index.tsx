@@ -1,11 +1,11 @@
 import { Stack, Typography } from "@mui/material";
 
 import Box from "@mui/material/Box";
-import InitialLoaderProps from "./InitialLoaderProps";
+import InitialLoaderProps from "./interfaces/InitialLoaderProps";
 import { animated } from "react-spring";
 import loader from "../../assets/ripple.svg";
 import logo from "../../assets/logo_light.svg";
-import useInitialLoaderAnims from "../../hooks/useInitialLoaderAnims";
+import useInitialLoaderAnims from "./hooks/useInitialLoaderAnims";
 import whiteCrossFilled from "../../assets/white_cross_filled.svg";
 import whiteCrossHollow from "../../assets/white_cross_hollow.svg";
 import whiteHaflCrossHollow from "../../assets/white_half_cross_hollow.svg";
@@ -154,6 +154,8 @@ const InitialLoader: React.FC<InitialLoaderProps> = () => {
                                         direction="row" 
                                         spacing={-3} 
                                         paddingBottom="20px"
+                                        display="flex"
+                                        alignItems="center"
                                     >
                                         <Box>
                                             <img
@@ -178,27 +180,14 @@ const InitialLoader: React.FC<InitialLoaderProps> = () => {
                                                 style={{
                                                     "color": "whitesmoke",
                                                     "fontFamily": "Jura Variable",
-                                                    "fontSize": "15px",
-                                                    "fontWeight": 400,
+                                                    "fontSize": "20px",
+                                                    "fontWeight": 700,
                                                     "letterSpacing": "7px",
                                                     "textTransform": "uppercase",
-                                                    "wordSpacing": "0px"
+                                                    "wordSpacing": "0px",
                                                 }}
                                             >
-                                                {/* Welcome to my portfolio */}
-                                            </Typography>
-
-                                            <Typography
-                                                style={{
-                                                    "color": "whitesmoke",
-                                                    "fontFamily": "Jura Variable",
-                                                    "fontSize": "30px",
-                                                    "fontWeight": 700,
-                                                    "letterSpacing": "15px",
-                                                    "textTransform": "uppercase",
-                                                }}
-                                            >
-                                                {/* Hang tight */}
+                                                Loading
                                             </Typography>
                                         </Stack>
                                     </Stack>

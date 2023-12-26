@@ -14,6 +14,7 @@
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
         "@fontsource-variable/jura": "^5.0.18",
+        "@fontsource-variable/montserrat": "^5.0.17",
         "@fontsource/monda": "^5.0.8",
         "@mui/material": "^5.15.1",
         "react": "^18.2.0",
