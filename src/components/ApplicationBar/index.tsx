@@ -13,7 +13,7 @@ const DARK_COLOR = "#18191f";
 
 const ApplicationBar = () => {
     const appBarElementAnim = useSpring({
-        "delay": 500,
+        "delay": 0,
         "from": {
             "opacity": 0,
             "transform": "scale(0.95)" 

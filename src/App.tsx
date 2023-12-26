@@ -19,7 +19,7 @@ function App() {
     useEffect(() => {
         setTimeout(() => {
             setMainRendered(true);
-        }, 2000);
+        }, 2700);
     }, []);
 
     useEffect(() => {
