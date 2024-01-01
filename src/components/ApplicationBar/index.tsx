@@ -1,108 +1,130 @@
 import {
     AppBar,
     Box,
+    Link,
     Stack,
     Toolbar,
     Typography
 } from "@mui/material";
-
+import { DARK_COLOR, LIGHT_COLOR } from "../../constant";
 import { animated, useSpring } from "react-spring";
-import logo from "../../assets/logo_dark.svg";
 
-const DARK_COLOR = "#18191f";
+import facebookLogo from "../../assets/facebook_logo_light.svg";
+import githubLogo from "../../assets/github_logo_light.svg";
+import linkedinLogo from "../../assets/linkedin_logo_light.svg";
+import logo from "../../assets/logo_light.svg";
+
+const SOCIAL_HANDLE_SIZE = 40;
+const LOGO_SIZE = 50;
 
 const ApplicationBar = () => {
     const appBarElementAnim = useSpring({
         "delay": 0,
         "from": {
             "opacity": 0,
-            "transform": "scale(0.95)" 
         },
         "opacity": 1,
-        "transform": "scale(1)"
     });
 
     return (
-        <AppBar 
-            position="sticky"
-            color="transparent"
-            elevation={0}
-            sx={{ "height": "100px" }}
-        >
-            <Toolbar 
-                disableGutters 
-                style={{ 
-                    "height": "100%",
-                    "width": "100%",
+        <animated.div style={appBarElementAnim}>
+            <AppBar
+                position="relative"
+                elevation={0}
+                sx={{ 
+                    "background": DARK_COLOR,
+                    "height": "100px",
                 }}
             >
-                <Box
-                    width="100%"
-                    height="100%"
-                    display="flex"
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    paddingLeft="40px"
+                <Toolbar 
+                    disableGutters 
+                    style={{ 
+                        "height": "100%",
+                        "width": "100%",
+                    }}
                 >
-                    <animated.div style={appBarElementAnim}>
-                        <Stack 
-                            direction="row" 
+                    <Box
+                        width="100%"
+                        height="100%"
+                        display="flex"
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        paddingLeft="40px"
+                    >
+                        
+                        <Box 
                             height="100%"
-                            spacing={1}
+                            width="100%"
                             display="flex"
                             alignItems="center"
+                            flexDirection="row"
                         >
-                            <Box display="flex" alignItems="center">
+                            <Box 
+                                display="flex" 
+                                alignItems="center"
+                                width="50%"
+                                pl={5}
+                            >
                                 <img
                                     src={logo} 
                                     alt="logo" 
                                     style={{
-                                        "height": `${40}px`,
-                                        "width": `${40}px`,
+                                        "height": `${LOGO_SIZE}px`,
+                                        "width": `${LOGO_SIZE}px`,
                                     }}
                                 />
                             </Box>
 
-                            <Box
-                                height="45px"
-                                width="3px"
-                                sx={{ "backgroundColor": DARK_COLOR }}
-                            />
-
-                            <Stack spacing="-5px">
-                                <Typography
-                                    style={{
-                                        "color": DARK_COLOR,
-                                        "fontFamily": "Jura Variable",
-                                        "fontSize": "20px",
-                                        "fontWeight": 700,
-                                        "letterSpacing": "1px",
-                                        "textTransform": "uppercase",
-                                        "wordSpacing": "2px",
-                                    }}
+                            <Box 
+                                display="flex" 
+                                alignItems="center"
+                                justifyContent="flex-end"
+                                width="50%"
+                                pr={20}
+                            >
+                                <Stack
+                                    direction="row"
+                                    spacing={4}
                                 >
-                                    SIDDHANT THAKARE
-                                </Typography>
+                                    <Link href="https://www.linkedin.com/in/siddhant-thakare/" target="_blank">
+                                        <img
+                                            src={linkedinLogo} 
+                                            alt="logo" 
+                                            style={{
+                                                "height": `${SOCIAL_HANDLE_SIZE}px`,
+                                                "width": `${SOCIAL_HANDLE_SIZE}px`,
+                                            }}
+                                        />
+                                    </Link>
 
-                                <Typography
-                                    style={{
-                                        "color": DARK_COLOR,
-                                        "fontFamily": "Jura Variable",
-                                        "fontSize": "20px",
-                                        "fontWeight": 500,
-                                        "letterSpacing": "1px",
-                                        "textTransform": "uppercase",
-                                        "wordSpacing": "5px",
-                                    }}
-                                >
-                                    SOFTWARE DEVELOPER
-                                </Typography>
-                            </Stack>
-                        </Stack>
-                    </animated.div>
-                </Box>
-            </Toolbar>
-        </AppBar>
+                                    <Link href="https://github.com/iambyt3z" target="_blank">
+                                        <img
+                                            src={githubLogo} 
+                                            alt="logo" 
+                                            style={{
+                                                "height": `${SOCIAL_HANDLE_SIZE}px`,
+                                                "width": `${SOCIAL_HANDLE_SIZE}px`,
+                                            }}
+                                        />
+                                    </Link>
+
+                                    <Link href="https://www.facebook.com/siddhant.thakare.79" target="_blank">
+                                        <img
+                                            src={facebookLogo} 
+                                            alt="logo" 
+                                            style={{
+                                                "height": `${SOCIAL_HANDLE_SIZE}px`,
+                                                "width": `${SOCIAL_HANDLE_SIZE}px`,
+                                            }}
+                                        />
+                                    </Link>
+                                </Stack>
+                            </Box>
+                        </Box>
+                    </Box>
+                </Toolbar>
+            </AppBar>
+        </animated.div>
     );
 };
 

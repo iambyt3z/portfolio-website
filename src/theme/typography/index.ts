@@ -21,17 +21,17 @@ interface ExtendedTypographyOptions extends TypographyOptions {
 
 export const typography = {
     "infoBody": {
-        "color": DARK_COLOR,
+        "color": "#00ADB5",
         "fontFamily": infoFontFamily,
         "fontSize": "30px",
         "fontStyle": "normal",
-        "fontWeight": 700,
+        "fontWeight": 500,
         "lineHeight": "40px",
         "textAlign": "center",
     },
 
     "infoHeading": {
-        "color": DARK_COLOR,
+        "color": "#222831",
         "fontFamily": infoFontFamily,
         "fontSize": "20px",
         "fontStyle": "normal",

@@ -1,7 +1,9 @@
 import { animated, useSpring } from "react-spring";
 import { useEffect, useState } from "react";
 
+import AboutMe from "./components/AboutMe";
 import ApplicationBar from "./components/ApplicationBar";
+import ApplicationFooter from "./components/ApplicationFooter";
 import { Box } from "@mui/material";
 import InitialLoader from "./components/InitialLoader";
 
@@ -44,12 +46,15 @@ function App() {
                         left={0}
                         top={0}
                         position="absolute"
-                        height="500vh"
                         width="100%"
                         zIndex={0}
                         sx={{ "backgroundColor": "white" }}
                     >
                         <ApplicationBar/>
+
+                        <AboutMe/>
+
+                        <ApplicationFooter/>
                     </Box>
                 }
             </main>
