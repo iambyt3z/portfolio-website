@@ -1,10 +1,10 @@
 import { Stack, Typography } from "@mui/material";
 
-const LINK_STYLE: React.CSSProperties = {
-    "color": "inherit",
-    "margin": "0 5px",
-    "textDecoration": "none",
-};
+// const LINK_STYLE: React.CSSProperties = {
+//     "color": "inherit",
+//     "margin": "0 5px",
+//     "textDecoration": "none",
+// };
 
 const StartSection = () => {
     return (

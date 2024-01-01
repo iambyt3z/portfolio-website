@@ -3,11 +3,10 @@ import {
     Box,
     Link,
     Stack,
-    Toolbar,
-    Typography
+    Toolbar
 } from "@mui/material";
-import { DARK_COLOR, LIGHT_COLOR } from "../../constant";
 import { animated, useSpring } from "react-spring";
+import { DARK_COLOR } from "../../constant";
 
 import facebookLogo from "../../assets/facebook_logo_light.svg";
 import githubLogo from "../../assets/github_logo_light.svg";

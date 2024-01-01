@@ -1,4 +1,3 @@
-import { DARK_COLOR } from "../../constant";
 import React from "react";
 import { TypographyOptions } from "@mui/material/styles/createTypography";
 import { infoFontFamily } from "./fontFamily";
