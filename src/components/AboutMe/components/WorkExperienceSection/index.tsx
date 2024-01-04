@@ -31,7 +31,7 @@ const WorkExperienceSection = () => {
                 pt={3}
             >
                 <Typography variant="infoBody">
-                    Nearly 2 years of work experience
+                    2 years of work experience
                 </Typography>
             </Box>
 
@@ -44,8 +44,8 @@ const WorkExperienceSection = () => {
                 <Typography variant="infoSubBody" px="5%">
                     In my professional journey, I teamed up with industry leaders to create products and services 
                     using technologies like React, Lambda Functions, Containerized APIs, PostgreSQL, MongoDB, etc. 
-                    I leveraged AWS and it's services for deploying and hosting services and products. 
-                    I am proficient in Java, Python, C/C++, with a soft spot for TypeScript.
+                    I've leveraged AWS and it's services for deploying and hosting services and products. 
+                    I have experience working with Java, Python, C/C++, with a soft spot for TypeScript.
                 </Typography>
             </Box>
 
@@ -55,35 +55,6 @@ const WorkExperienceSection = () => {
                 justifyContent="center"
                 pt={15}
             >
-                {/* Work Experience Table */}
-                {/* <Grid container rowSpacing={4} width="90%" ml="12%">
-                    {WorkExperience.map((workExperienceItem) => {
-                        return (
-                            <>
-                                <Grid item xs={4}>
-                                    <Typography variant="workExperienceColumn">
-                                        {workExperienceItem.role}
-                                    </Typography>
-                                </Grid>
-
-                                <Grid item xs={4}>
-                                    <a href={workExperienceItem.companyUrl} target="_blank" style={LINK_STYLE}>
-                                        <Typography variant="workExperienceColumn">
-                                            {workExperienceItem.company}
-                                        </Typography>
-                                    </a>
-                                </Grid>
-
-                                <Grid item xs={4}>
-                                    <Typography variant="workExperienceColumn">
-                                        {workExperienceItem.time}
-                                    </Typography>
-                                </Grid>
-                            </>
-                        );
-                    })}
-                </Grid> */} 
-
                 {/* Work Experience Companies */}
                 <Grid 
                     container
