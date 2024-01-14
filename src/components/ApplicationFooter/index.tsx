@@ -65,7 +65,7 @@ const ApplicationFooter = () => {
                     alignItems="flex-start"
                 >
                     <Typography variant="contactInfoHeading" mb={2}>
-                        Follow me on
+                        Find me on
                     </Typography>
 
                     <Link href={LINKEDIN_PROFILE} target="_blank" underline="hover" color="inherit">

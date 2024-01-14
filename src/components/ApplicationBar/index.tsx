@@ -63,14 +63,16 @@ const ApplicationBar = () => {
                                 width="50%"
                                 pl={5}
                             >
-                                <img
-                                    src={logo} 
-                                    alt="logo" 
-                                    style={{
-                                        "height": `${LOGO_SIZE}px`,
-                                        "width": `${LOGO_SIZE}px`,
-                                    }}
-                                />
+                                <Link href="/portfolio-website/">
+                                    <img
+                                        src={logo} 
+                                        alt="logo" 
+                                        style={{
+                                            "height": `${LOGO_SIZE}px`,
+                                            "width": `${LOGO_SIZE}px`,
+                                        }}
+                                    />
+                                </Link>
                             </Box>
 
                             <Box 
