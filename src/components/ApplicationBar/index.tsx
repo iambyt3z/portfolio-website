@@ -8,7 +8,6 @@ import {
 import { animated, useSpring } from "react-spring";
 import { DARK_COLOR } from "../../constant";
 
-import facebookLogo from "../../assets/facebook_logo_light.svg";
 import githubLogo from "../../assets/github_logo_light.svg";
 import linkedinLogo from "../../assets/linkedin_logo_light.svg";
 import logo from "../../assets/logo_light.svg";
@@ -99,18 +98,7 @@ const ApplicationBar = () => {
                                     <Link href="https://github.com/iambyt3z" target="_blank">
                                         <img
                                             src={githubLogo} 
-                                            alt="logo" 
-                                            style={{
-                                                "height": `${SOCIAL_HANDLE_SIZE}px`,
-                                                "width": `${SOCIAL_HANDLE_SIZE}px`,
-                                            }}
-                                        />
-                                    </Link>
-
-                                    <Link href="https://www.facebook.com/siddhant.thakare.79" target="_blank">
-                                        <img
-                                            src={facebookLogo} 
-                                            alt="logo" 
+                                            alt="logo"
                                             style={{
                                                 "height": `${SOCIAL_HANDLE_SIZE}px`,
                                                 "width": `${SOCIAL_HANDLE_SIZE}px`,
