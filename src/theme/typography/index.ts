@@ -1,9 +1,11 @@
-import React from "react";
-import { TypographyOptions } from "@mui/material/styles/createTypography";
+import { CSSProperties, TypographyOptions } from "@mui/material/styles/createTypography";
+
 import { infoFontFamily } from "./fontFamily";
 
 declare module "@mui/material/Typography" {
     interface TypographyPropsVariantOverrides {
+        contactInfoBody: true;
+        contactInfoHeading: true;
         infoBody: true;
         infoHeading: true;
         infoSubBody: true;
@@ -12,13 +14,37 @@ declare module "@mui/material/Typography" {
 }
 
 interface ExtendedTypographyOptions extends TypographyOptions {
-    infoBody: React.CSSProperties;
-    infoHeading: React.CSSProperties;
-    infoSubBody: React.CSSProperties;
-    workExperienceColumn: React.CSSProperties;
+    contactInfoBody: CSSProperties;
+    contactInfoHeading: CSSProperties;
+    infoBody: CSSProperties;
+    infoHeading: CSSProperties;
+    infoSubBody: CSSProperties;
+    workExperienceColumn: CSSProperties;
 }
 
 export const typography = {
+    "contactInfoBody": {
+        "color": "#f5f5f5",
+        "fontFamily": infoFontFamily,
+        "fontSize": "15px",
+        "fontStyle": "normal",
+        "fontWeight": 400,
+        "lineHeight": "25px",
+        "textAlign": "left",
+        "textTransform": "none",
+    },
+
+    "contactInfoHeading": {
+        "color": "#f5f5f5",
+        "fontFamily": infoFontFamily,
+        "fontSize": "20px",
+        "fontStyle": "normal",
+        "fontWeight": 600,
+        "lineHeight": "25px",
+        "textAlign": "center",
+        "textTransform": "none",
+    },
+
     "infoBody": {
         "color": "#00ADB5",
         "fontFamily": infoFontFamily,
